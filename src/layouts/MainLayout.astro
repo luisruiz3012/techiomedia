@@ -1,0 +1,33 @@
+---
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='icon' type='image/svg+xml' href='/logo-white.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Techio Media</title>
+  </head>
+  <body class='text-white'>
+    <Header />
+    <div
+      class='fixed inset-0 -z-10 h-full w-full items-center py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'
+    >
+    </div>
+    <slot />
+    <script
+      type='text/javascript'
+      src='https://assets.calendly.com/assets/external/widget.js'
+      async></script>
+    <!-- Calendly inline widget end -->
+  </body>
+</html>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

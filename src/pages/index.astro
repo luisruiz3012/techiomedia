@@ -1,0 +1,85 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Service from '../components/Service.astro';
+---
+
+<MainLayout>
+  <Hero />
+  <section class='py-24 px-10 lg:p-24'>
+    <h3 class='text-5xl lg:text-6xl font-semibold text-center'>
+      Why should you work with us?
+    </h3>
+    <div class='mt-20 flex flex-col gap-8 text-lg text-justify text-pretty'>
+      <p>
+        In the ever-evolving landscape of digital marketing, partnering with the
+        right agency can make all the difference in achieving your business
+        goals. At Techio Media, we pride ourselves on being more than just
+        another digital marketing agency. Here's why you should choose to work
+        with us:
+      </p>
+      <p>
+        <span class='font-bold'>1. Tailored Strategies for Your Business:</span>
+        We understand that every business is unique, which is why we don't believe
+        in one-size-fits-all solutions. Instead, we take the time to understand your
+        business, your goals, and your target audience to craft customized strategies
+        that are tailored to your specific needs and objectives.
+      </p>
+      <p>
+        <span class='font-bold'>2. Data-Driven Approach:</span> We believe in the
+        power of data to drive decision-making and optimize performance. Our team
+        leverages advanced analytics and tracking tools to continuously monitor and
+        analyze campaign performance, allowing us to make data-driven adjustments
+        and maximize your ROI.
+      </p>
+      <p>
+        <span class='font-bold'>3. Transparent Communication:</span> Communication
+        is key to any successful partnership. That's why we maintain open and transparent
+        communication with our clients every step of the way. From regular progress
+        updates to detailed performance reports, you'll always know exactly how your
+        campaigns are performing and what steps we're taking to drive results.
+      </p>
+    </div>
+  </section>
+  <section class='py-24 px-10 lg:p-24 text-lg'>
+    <h3 class='text-6xl font-semibold text-center'>Services</h3>
+    <p class='mt-12 text-justify text-pretty'>
+      At Techio Media, we specialize in two core areas of digital marketing:
+      Facebook and Instagram advertising, and website creation. Our services are
+      designed to help businesses like yours maximize their online presence and
+      achieve their marketing goals. Here's what we offer:
+    </p>
+
+    <div>
+      <Service
+        title='Facebook and Instagram Advertising'
+        text=`Harness the power of social media advertising to reach your target audience and drive results. Our expert team will create and manage highly targeted Facebook and Instagram ad campaigns tailored to your specific goals, whether it's increasing brand awareness, driving website traffic, generating leads, or boosting sales. From ad creative to audience targeting and campaign optimization, we handle it all to ensure maximum ROI for your advertising budget.`
+        icon='mdi:facebook'
+      />
+      <Service
+        title='Web Design'
+        text=`Your website is the cornerstone of your online presence. Whether you're starting from scratch or looking to revamp your existing site, we're here to help. Our website creation services are fully customized to meet your unique needs and objectives. From responsive design and user-friendly navigation to compelling content and seamless integration of social media and e-commerce functionalities, we'll work closely with you to create a visually stunning and high-performing website that effectively showcases your brand and drives conversions.`
+        icon='mdi:web'
+      />
+    </div>
+  </section>
+  <section class='py-24 px-10 lg:p-24 text-lg'>
+    <h3 id='calendar' class='text-6xl font-semibold text-center'>
+      Schedule a free discovery call
+    </h3>
+
+    <p class='mt-10 text-justify text-pretty'>
+      Ready to take the next step in boosting your digital presence? Let's
+      connect for a quick 15-minute discovery call to discuss your goals,
+      challenges, and how we can help you achieve success.
+    </p>
+
+    <!-- Calendly inline widget begin -->
+    <div
+      class='calendly-inline-widget mt-10'
+      data-url='https://calendly.com/techiomedia/30min'
+      style='min-width:270px;height:700px;'
+    >
+    </div>
+  </section>
+</MainLayout>
