@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import Technology from '../assets/technology.jpg';
+---
+
+<section class='w-full py-20 px-5 lg:px-32 flex flex-col items-center'>
+  <h3 class='font-semibold text-3xl lg:text-6xl w-3/4 text-center'>
+    Aprovecha el poder de las redes sociales
+  </h3>
+
+  <div
+    class='flex flex-col lg:flex-row lg:min-h-96 justify-center lg:justify-between items-center mt-12'
+  >
+    <Image
+      src={Technology}
+      alt='Tech guy'
+      class='lg:w-2/4 lg:min-h-96 rounded-md p-5 lg:p-0'
+    />
+
+    <article
+      class='flex items-center justify-center flex-col gap-4 min-h-96 text-lg p-5 lg:p-10'
+    >
+      <p>
+        En un mundo cada vez más digital, las redes sociales se han convertido
+        en una herramienta indispensable para el éxito de cualquier negocio. Son
+        una ventana al mundo, una plataforma para conectar con clientes
+        potenciales, fidelizar a los existentes y hacer crecer tu marca.
+      </p>
+
+      <p>
+        Con una estrategia bien definida y una ejecución creativa, las redes
+        sociales pueden ser el impulso que tu negocio necesita para alcanzar
+        nuevos niveles de éxito.
+      </p>
+
+      <p>¿Estás listo para aprovechar el potencial de las redes sociales?</p>
+    </article>
+  </div>
+</section>

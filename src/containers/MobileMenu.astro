@@ -1,0 +1,33 @@
+---
+const url = Astro.url.pathname;
+
+const selectedUrl = (option) => {
+  switch (url === option) {
+    case true:
+      return 'font-semibold bg-gray-950 w-full text-center py-8';
+      break;
+  }
+};
+---
+
+<section
+  id='mobileMenu'
+  class='z-30 fixed right-0 top-24 bottom-0 left-0 bg-gray-900 bg-opacity-90 w-screen hidden'
+>
+  <ul
+    class='text-white h-full text-3xl flex items-center justify-center flex-col gap-10'
+  >
+    <li class={`${selectedUrl('/')}`}>
+      <a href='/'>Inicio</a>
+    </li>
+    <li class={`${selectedUrl('/nosotros')}`}>
+      <a href='/nosotros'>¿Quiénes somos?</a>
+    </li>
+    <li class={`${selectedUrl('/servicios')}`}>
+      <a href='/servicios'>Servicios</a>
+    </li>
+    <li class={`${selectedUrl('/contacto')}`}>
+      <a href='/contacto'>Contacto</a>
+    </li>
+  </ul>
+</section>

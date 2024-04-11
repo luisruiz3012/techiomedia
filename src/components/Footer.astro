@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import Logo from '../../public/logo-white.svg';
+import { Icon } from 'astro-icon/components';
+---
+
+<footer
+  class='bg-gray-950 absolute flex-col text-white w-full min-h-36 p-10 flex gap-6 lg:flex-row justify-around items-center'
+>
+  <a href='/'>
+    <Image src={Logo} width={80} alt='logo' />
+  </a>
+  <section>
+    <p class='text-sm'>
+      © Derechos reservados Techio Media 2024 | Desarrollado por Techio Media
+    </p>
+  </section>
+  <section class='flex gap-6 items-center justify-center'>
+    <a href='https://www.facebook.com/techiomedia/'>
+      <Icon name='mdi:facebook' size={30} />
+    </a>
+    <a
+      href='https://wa.me/50242992289?text=Hola,+estoy+interesado+en+conocer+mas+de+tus+servicios'
+    >
+      <Icon name='mdi:whatsapp' size={30} />
+    </a>
+    <a href='mailto:techiomediaagency@gmail.com'>
+      <Icon name='mdi:email' size={30} />
+    </a>
+  </section>
+</footer>

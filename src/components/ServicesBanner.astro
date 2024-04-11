@@ -1,0 +1,38 @@
+---
+import ButtonTo from './ButtonTo.astro';
+---
+
+<section class='w-full h-full bg-fixed' id='services'>
+  <div
+    class='w-full h-full bg-gray-950 bg-opacity-70 py-32 px-10 lg:px-0 text-white flex flex-col justify-center items-center'
+  >
+    <h3 class='font-semibold text-4xl lg:text-7xl lg:w-3/4 text-center'>
+      Es momento de impulsar tu presencia en linea
+    </h3>
+    <p class='lg:w-3/5 my-10 text-lg'>
+      Con el avance de las nuevas tecnologías, es innegable que este es el
+      momento óptimo para considerar la importancia de digitalizar tu negocio.
+      Ya sea que estés buscando promocionar tu empresa, mejorar la interacción
+      con tus clientes o simplemente expandir tu marca, estamos aquí para
+      brindarte apoyo.
+    </p>
+
+    <div class='flex flex-col lg:flex-row justify-center items-center gap-4'>
+      <ButtonTo to='/servicios' text='Conoce nuestro servicios' />
+      <a
+        href='/contacto'
+        class='px-6 py-2 bg-white text-center text-black rounded-full hover:border-2 hover:bg-gray-400 outline-none cursor-pointer border-black transition-all ease-in-out'
+        >Cotiza ahora</a
+      >
+    </div>
+  </div>
+</section>
+
+<style scoped>
+  #services {
+    background-image: url('../assets/services.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
