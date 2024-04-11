@@ -1,18 +1,41 @@
 ---
-
+import ButtonTo from './ButtonTo.astro';
 ---
 
-<div class='flex flex-col items-center justify-center pt-20 lg:pt-0 h-screen'>
-  <h1 class='text-5xl lg:text-8xl font-semibold'>Techio Media</h1>
-  <h2 class='text-2xl text-center text-wrap w-56 lg:w-96 lg:text-4xl mt-6'>
-    Take your business to the next level
-  </h2>
-  <div class='text-center h-20 cursor-pointer flex items-center justify-center'>
-    <a
-      href='#calendar'
-      class='animate-bounce bg-white text-black px-6 py-2 rounded-full text-lg mt-20 hover:bg-gray-300 hover:font-semibold transition-all ease-in-out hover:border-2 hover:border-black'
+<div
+  class='flex flex-col right-0 left-0 items-center lg:items-start bg-fixed text-white justify-center h-screen'
+  id='hero'
+>
+  <div class='absolute bg-gray-950 bg-opacity-70 w-full h-screen z-10'></div>
+
+  <div
+    class='z-20 flex flex-col items-center lg:items-start justify-start lg:px-40 transition-opacity ease-in duration-1000 delay-300 animate-in fade-in-0'
+  >
+    <h5
+      class='text-lg uppercase font-bold text-orange-500 text-center px-10 lg:px-0 mb-4'
     >
-      Schedule a call</a
+      Marketing Digital y Diseño Web
+    </h5>
+    <h1 class='text-7xl text-center lg:text-8xl font-semibold'>Techio Media</h1>
+
+    <h2
+      class='text-xl text-center lg:text-start w-56 lg:w-[500px] lg:text-3xl mt-6'
     >
+      Mejora tu presencia en linea sin complicaciones
+    </h2>
+    <div
+      class='cursor-pointer h-1 mt-16 text-lg flex items-center justify-start'
+    >
+      <ButtonTo to='/nosotros' text='Conoce más' />
+    </div>
   </div>
 </div>
+
+<style scoped>
+  #hero {
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+</style>

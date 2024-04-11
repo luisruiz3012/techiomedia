@@ -1,11 +1,58 @@
 ---
+import { Icon } from 'astro-icon/components';
+const url = Astro.url.pathname;
 
+const selected = (option) => {
+  switch (url === option) {
+    case true:
+      return 'font-semibold text-orange-500 border-b-2 border-orange-700';
+  }
+};
 ---
 
+<script>
+  const mobileButton = document.getElementById('mobileButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileButton.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.remove('hidden');
+    } else {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+</script>
+
 <header
-  class='px-6 py-4 h-24 w-screen flex items-center justify-between fixed bg-black z-10 top-0'
+  class='px-6 py-4 h-24 w-screen flex items-center justify-between text-white z-30 fixed bg-gray-950 top-0'
 >
   <a href='/'>
-    <img src='/logo-white.svg' class='h-20 rounded-full' alt='logo' />
+    <img src='/logo-white.svg' class='h-20' alt='logo' />
   </a>
+  <nav>
+    <ul class='lg:flex gap-5 pr-6 hidden items-center'>
+      <li class={selected('/')}>
+        <a href='/' class='hover:text-orange-400'>Inicio</a>
+      </li>
+      <li class={selected('/nosotros')}>
+        <a href='/nosotros' class='hover:text-orange-400'>¿Quiénes somos?</a>
+      </li>
+      <li class={selected('/servicios')}>
+        <a href='/servicios' class='hover:text-orange-400'>Servicios</a>
+      </li>
+      <li class={selected('/contacto')}>
+        <a href='/contacto' class='hover:text-orange-400'>Contacto</a>
+      </li>
+      <div
+        class='text-orange-600 flex items-center justify-center gap-2 px-6 py-2 rounded-full font-semibold border border-orange-600'
+      >
+        <Icon name='mdi:phone' size={20} />
+        <p>(+502) 4299 2289</p>
+      </div>
+    </ul>
+
+    <button class='lg:hidden' id='mobileButton'>
+      <Icon name='mdi:menu' size={30} />
+    </button>
+  </nav>
 </header>

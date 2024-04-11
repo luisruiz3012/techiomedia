@@ -1,23 +1,29 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileMenu from '../containers/MobileMenu.astro';
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='es'>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='icon' type='image/svg+xml' href='/logo-white.svg' />
     <meta name='generator' content={Astro.generator} />
+    <meta
+      name='description'
+      content='En Techio Media, nos dedicamos a impulsar el éxito de nuestros clientes en el mundo digital. Somos una agencia de marketing digital con sede en Guatemala, especializada en el desarrollo de estrategias creativas y efectivas para promover el crecimiento de negocios en línea.'
+    />
     <title>Techio Media</title>
   </head>
-  <body class='text-white'>
+  <body class=''>
     <Header />
-    <div
-      class='fixed inset-0 -z-10 h-full w-full items-center py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'
-    >
+    <div class='pt-24 bg-gray-100 min-h-screen'>
+      <MobileMenu />
+      <slot />
     </div>
-    <slot />
+    <Footer />
     <script
       type='text/javascript'
       src='https://assets.calendly.com/assets/external/widget.js'
